@@ -25,7 +25,16 @@ class ListProviderService {
       throw new AppError('User not found');
     }
 
-    return users;
+    const listUsers: User[] = [];
+
+    users.map(user => {
+      const newUsers = { ...user };
+      delete newUsers.password;
+
+      return listUsers.push(newUsers);
+    });
+
+    return listUsers;
   }
 }
 
