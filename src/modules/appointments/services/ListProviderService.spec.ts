@@ -35,6 +35,9 @@ describe('ListProviders', () => {
       user_id: loggedUser.id,
     });
 
+    delete user1.password;
+    delete user2.password;
+
     expect(providers).toEqual([user1, user2]);
   });
 });
