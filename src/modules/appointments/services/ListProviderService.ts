@@ -21,16 +21,7 @@ class ListProviderService {
       except_user_id: user_id,
     });
 
-    const listUsers: User[] = [];
-
-    users.map(user => {
-      const newUsers = { ...user };
-      delete newUsers.password;
-
-      return listUsers.push(newUsers);
-    });
-
-    return listUsers;
+    return users;
   }
 }
 

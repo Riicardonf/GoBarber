@@ -23,6 +23,9 @@
         "prettier"
     ],
     "rules": {
+      "class-methods-use-this":"off",
+      "no-useless-constructor":"off",
+      "camelcase":"off",
       "prettier/prettier": "error",
       "import/extensions":[
         "error",
