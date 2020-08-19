@@ -19,7 +19,7 @@ class Appointment {
   provider_id: string;
 
   @ManyToOne(() => User)
-  @JoinColumn({ name: 'user_id' })
+  @JoinColumn({ name: 'provider_id' })
   provider: User;
 
   @Column() // Se passar sem paramêtro o default é varchar
